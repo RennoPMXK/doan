@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    font-family: Arial;
+    font-size: 17px;
+    padding: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row1,
+.row2
+ {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+}
+
+.col-25 {
+    flex: 25%;
+}
+
+.col-50 {
+  flex: 50%;
+}
+
+.col-75 {
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  
+  padding: 5px 20px 15px 20px;
+ 
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #000000;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+a:link {
+  text-decoration: none;
+  color:black
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+    .row1 {
+        flex-direction: column-reverse;
+    }
+    .row2{
+        flex-direction: column;
+    }    
+    .col-25 {
+        margin-bottom: 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+
+<div class="row1">
+    <div class="col-75">
+        <div class="container">
+        <form action="/action_page.php">
+        
+            <div class="row2">
+                <div class="col-50">
+                    <h3>Địa chỉ</h3>
+                    <label><i class="fa fa-user"></i> Họ và tên </label>
+                    <input type="text" placeholder="Nguyễn Văn A">
+                    <label><i class="fa fa-envelope"></i> Email</label>
+                    <input type="text" placeholder="ngva@example.com">
+                    <label"><i class="fa fa-institution"></i>Tỉnh thành</label>
+                    <input type="text" placeholder="Tp. Hồ Chí Minh">
+                    <label><i class="fa fa-institution"></i>Quận huyện</label>
+                    <input type="text" placeholder="Quận 5">
+                    <label><i class="fa fa-institution"></i>Phường xã</label>
+                    <input type="text" placeholder="Phường 3">
+                    <label><i class="fa fa-address-card-o"></i> Địa chỉ</label>
+                    <input type="text" placeholder="273 An Dương Vương">
+                </div>
+
+                <div class="col-50">
+                    <h3>Vận chuyển</h3>
+                    <div> Phương thức vận chuyển </div>
+                    <label style="border: 1px solid #ccc; ;background-color:white; display: block;padding:10px; ;margin-top: 10px;border-radius: 3px;">
+                        <input type="radio" checked >
+                        <p style="display: inline;" id="transport" >Giao hàng tận nơi</p>  
+                        <span style="float:right">40.000</span>
+                    </label>    
+                
+                    <h3  >Thanh toán</h3>
+                    <div>
+                        <div>
+                            <label style="border: 1px solid #ccc; ;background-color:white; display: block;padding:10px; ;margin-top: 10px;border-radius: 3px;">
+                                <input type="radio" checked >
+                            Thanh toán khi giao hàng (COD)
+                            </label> 
+                        </div>
+                        <div>
+                            Bạn chỉ phải thanh toán khi nhận được hàng
+                        </div>
+                    </div>
+                </div>
+            </div>           
+            
+            <input onclick="AddToBill()"  value="Đặt hàng" class="btn">
+        </form>
+    </div>
+</div>
+<div class="col-25">
+  <div class="container" style="background-color:#f2f2f2;">
+    <div >
+      <h4 >
+          <span>Đơn hàng</span>
+          <span >(1 sản phẩm)</span>
+      </h4>
+      <ul class="list" style="border-top:1px solid #ccc; list-style-type: none; margin: 0; padding: 0;">  
+          <li class="item-info">
+              <div style="border-bottom:1px solid #ccc; padding-top: 20px; padding-bottom: 20px">
+                  <span><a href="#">Black Link</a></span>
+                  <span class="price" style="float: right">3.200.000</span>
+                  <div><small style="color: grey" >3.200.000 x 1</small></div>
+              </div>                    
+          </li> 
+          <li>
+            <div style="padding-top:20px; padding-bottom: 20px">
+            <span>Phí vận chuyển </span>
+            <small style="float: right; color: grey">40.000</small>
+            </div>
+          </li> 
+          <li class="list-group-item"> 
+            <div style="border-top:1px solid #ccc;padding-top:30px;padding-bottom:30px">
+              <span>Tổng thành tiền </span>
+              <strong style="float: right;">3.240.000</strong>
+            </div>
+          </li>
+      </ul>
+
+
+      <div class="promo-code">
+          <input type="text" placeholder="Mã khuyến mãi">
+          <div class="input-group-append">
+              <button type="submit" class="btn ">Xác nhận</button>
+          </div>
+      </div>
+
+  </div>
+</div>
+</div>
+</div>
+ 
+</body>
+</html>

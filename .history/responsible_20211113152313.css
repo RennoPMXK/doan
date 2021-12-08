@@ -1,0 +1,21 @@
+
+
+/* Tablet */
+
+@media only screen and (max-width: 1024px){
+   .navbar-menu {
+       display: none;
+      
+   }
+
+   .navbar-wrapper {
+        justify-content: space-around;
+   }
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 740px) {
+
+}

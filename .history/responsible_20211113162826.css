@@ -1,0 +1,30 @@
+
+
+/* Tablet */
+
+@media only screen and (max-width: 1024px){
+   .navbar-menu {
+       display: none;
+      
+   }
+
+   .navbar-wrapper {
+        justify-content: space-around;
+   }
+
+
+   .navbar-icon-item:last-child {
+        display: block;
+   }
+
+
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 740px) {
+  .logo img{ 
+      height: 30px;
+  }
+}

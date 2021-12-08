@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./grid.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsible.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-wrapper">
+            <a class="logo">
+                <img src="./img/logo.png" alt="">
+            </a>
+    
+            <div class="navbar-menu mobile-menu">
+                <i class='bx bx-x mobile-close-icon'></i>
+                <li class="navbar-menu-item"><a class = 'active' href="#">Trang chủ</a></li>
+                <li class="navbar-menu-item"><a href="#">Giới thiệu</a></li>
+                <li class="navbar-menu-item"><a href="#">Sản phẩm <i class='bx bxs-down-arrow navbar-menu-icon'></i></a>
+                    <ul class="navbar-sub-menu">
+                        <li class="navbar-sub-menu-item"><a href="">Đồng hồ nam</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Đồng hồ nữ</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Đồng hồ mới về</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Phụ kiện nam</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Phụ kiện nữ</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-menu-item"><a href="#">Tin tức</a></li>
+                <li class="navbar-menu-item"><a href="#">Liên hệ</a></li>
+            </div>
+    
+            <div class="navbar-icon">
+                 <li class="navbar-icon-item"><a href=""><i class='bx bx-search-alt'></i></a></li>
+                 <li class="navbar-icon-item"><a href=""><i class='bx bx-user'></i></a></li>
+                 <li class="navbar-icon-item"><a href="#"><i class='bx bx-shopping-bag bx-tada ' ></i></a></li>   
+                 <li class="navbar-icon-item"><a href="#"><i class='bx bx-menu-alt-right menu-icon'></i></a></li>   
+
+            </div>
+        </div>
+        <div class="modal"></div>
+    </div>
+
+    <div class="hero-section">
+        
+             <div class="bgimg slide-item fade" style="background-image: url(./img/1a\(32\).jpg)">
+                 <div class="caption">
+                     <h2 class="top-down delay-2">
+                        ĐỒNG HỒ ROLEX
+                        
+                     </h2>
+
+                     <p class="top-down delay-4">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eligendi voluptates enim tempora cupiditate ex minus aperiam impedit maxime nam. Sunt neque amet veniam vitae adipisci impedit aliquam officia hic.
+                     </p>
+
+                     <button class="top-down delay-6">
+                         MUA NGAY
+                     </button>
+                 </div>
+
+             </div>
+ 
+             
+             <div class="bgimg slide-item fade" style="background-image: url(./img/dong-ho-thoi-trang-rolex-banner.jpg)">
+                <div class="caption">
+                    <h2>
+                        ĐỒNG HỒ ROLEX
+                    </h2>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eligendi voluptates enim tempora cupiditate ex minus aperiam impedit maxime nam. Sunt neque amet veniam vitae adipisci impedit aliquam officia hic.
+                    </p>
+
+                    <button>
+                        MUA NGAY
+                    </button>
+                </div>
+              
+             </div>
+
+             
+             <div class="bgimg slide-item fade" style="background-image: url(./img/Banchay_Longines_banner-1024x427.jpg)">
+                <div class="caption">
+                    <h2>
+                        ĐỒNG HỒ ROLEX
+                    </h2>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eligendi voluptates enim tempora cupiditate ex minus aperiam impedit maxime nam. Sunt neque amet veniam vitae adipisci impedit aliquam officia hic.
+                    </p>
+
+                    <button>
+                        MUA NGAY
+                    </button>
+                </div>
+
+             </div>
+
+            
+             <div class="slide-control">
+                <div class="slide-control-wrapper">
+                    <span class="dot" onclick="chooseSlide(0)"></span>
+                    <span class="dot"  onclick="chooseSlide(1)"></span>
+                    <span class="dot" onclick="chooseSlide(2)" ></span>
+
+                </div>
+             </div>
+       
+    </div>
+
+    <div class="hero-section-mini ">
+        <div class="container row">
+            <div class="hero-section-mini-item col-3 col-md-6 col-sm-6">
+                <img src="./img/icon_service_1.svg" alt="">
+                 <h3>VẬN CHUYỂN TOÀN CẦU</h3>
+                 <p>Chúng tôi miễn phí vận chuyển tất cả đơn hàng trị giá trên 2.000.000Đ</p>
+            </div>
+   
+            <div class="hero-section-mini-item col-3 col-md-6 col-sm-6">
+               <img src="./img/icon_service_2.svg" alt="">
+                <h3>HỖ TRỢ ONLINE 24/24</h3>
+                <p>Chúng tôi luôn hỗ trợ khách hàng 24/24 tất cả ngày trong tuần</p>
+           </div>
+   
+           <div class="hero-section-mini-item col-3 col-md-6 col-sm-6">
+               <img src="./img/icon_service_3.svg" alt="">
+                <h3>MIỄN PHÍ ĐỔI TRẢ</h3>
+                <p>Miễn phí đổi trả trong vòng 15 ngày đầu tiên áp dụng cho tất cả các mặt hàng</p>
+           </div>
+   
+           <div class="hero-section-mini-item col-3 col-md-6 col-sm-6">
+               <img src="./img/icon_service_4.svg" alt="">
+                <h3>QUÀ TẶNG HẤP DẪN</h3>
+                <p>Chương trình khuyến mãi cực lớn và hấp dẫn vào mỗi chủ nhật hàng tuần</p>
+           </div>
+
+        </div>
+    </div>
+
+    <section class="product-list">
+        <div class="container">
+            <div class="section-title">
+                <h3>DANH MỤC SẢN PHẨM</h3>
+                <div class="title-line"></div>
+            </div>
+            <div class="product-list-item-wrapper ">
+                   
+                        <div style="background-image: url('./img/cate_1.jpg');" class="product-list-item ">
+                            <div class="product-list-item-content">
+                                <h1>Đồng hồ nam</h1>
+                                <p>Xem thêm<i class='bx bx-right-arrow-alt'></i></p>
+                            </div>
+                       </div>
+
+                  
+                  
+                        <div style="background-image: url(./img/cate_3.jpg);" class="product-list-item ">
+                            <div class="product-list-item-content">
+                                <h1>Đồng hồ nam</h1>
+                                <p>Xem thêm<i class='bx bx-right-arrow-alt'></i></p>
+                            </div>
+                        </div>
+
+                   
+
+                 
+                      <div style="background-image: url(./img/cate_2.jpg);" class="product-list-item">
+                          <div class="product-list-item-content">
+                              <h1>Đồng hồ nam</h1>
+                              <p>Xem thêm<i class='bx bx-right-arrow-alt'></i></p>
+                          </div>
+                       </div>
+          
+                      <div style="background-image: url(./img/cate_4.jpg)"class="product-list-item ">
+                          <div class="product-list-item-content">
+                              <h1>Đồng hồ nam</h1>
+                              <p>Xem thêm<i class='bx bx-right-arrow-alt'></i></p>
+                          </div>
+                     </div>
+
+           </div>
+
+        </div>
+        
+    </section>
+
+    <section class="best-sale">
+        <div class="container">
+            <div class="section-title">
+                <h3>TOP SẢN PHẨM BÁN CHẠY</h3>
+                <div class="title-line"></div>
+            </div>
+            <div class="menu-best-sale-title">
+                
+                <div id="nam" class="menu-best-sale-title-item" onclick="changeProducts(nam)">
+                    <h3>Đồng hồ nam</h3>
+                </div>
+
+                <div id="nu" class="menu-best-sale-title-item" onclick = "changeProducts(nu)">
+                    <h3>Đồng hồ nữ</h3>
+                </div>
+
+
+                <div id="phukien" class="menu-best-sale-title-item" onclick = "changeProducts(phukien)">
+                    <h3>Phụ kiện</h3>
+                </div>
+            </div>
+           
+
+            <div id="content"  class="menu-best-sale-content row">
+                <div class="menu-best-sale-content-item col-3">
+                           <div class="menu-best-sale-content-item-img">
+                                  <img src="./img/nam1.jpg" alt="" class="product-img">
+                                  <i class='bx bx-bullseye product-icon'></i>
+                                  <i class='bx bx-shopping-bag product-icon'></i>
+                           </div>
+
+                           <div class="menu-best-sale-content-item-content">
+                                <h3 class="item-content-name">Black Pink</h3>
+                                <div class="price">
+                                    <div class="price-old"><del>4.500.000đ</del></div>
+                                    <div class="price-new">3.200.000đ</div>
+                                </div>
+                           </div>
+                </div>
+               
+            </div>
+
+   
+                
+               
+        
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="footer-contact">
+            <div class="container">
+                <div class= "footer-contact-content row">
+                    <h3 class="col-6 col-md-6 col-sm-12">NHẬN THÔNG TIN KHUYẾN MÃI TỪ CHÚNG TÔI</h3>
+                    <div class="form col-6 col-md-6 col-sm-12">
+                        <input type="text" placeholder="Nhập email của bạn tại đây"><a href="">Gửi</a></input>
+                       
+                    </div>
+                    
+                </div>
+
+            </div>
+         
+         </div>
+        <div class="container">
+           
+            <div class="wrapper row ">
+                <div class="footer-logo row col-5 col-md-6 col-sm-12">
+                    <a class="footer-img">
+                        <img src="./img/logo.png" alt="">
+                    </a> 
+
+                    <ul class="footer-des">
+                           <li class="footes-des-item">
+                               <div class="footer-des-icon">
+                                    <i class='bx bxs-map'></i>
+                               </div>
+                               <p>Tầng 6, Tòa nhà Ladeco, 266 Đội Cấn,<br> Phường Liễu Giai, Quận Ba Đình, TP Hà Nội</p>
+                           </li>
+                           <li class="footes-des-item">
+                                <div class="footer-des-icon">
+                                    <i class='bx bxs-time-five' ></i>
+                                </div>
+                               <p>Giờ làm việc: Từ 9:00 đến 22:00 các ngày <br>trong tuần từ Thứ 2 đến Chủ nhật</p>
+                           </li>
+                           <li class="footes-des-item">
+                            <div class="footer-des-icon">
+                                <i class='bx bxs-phone' ></i>
+                             </div>
+                               <p>Hotline<br>
+                                   <span>19006750</span>
+                               </p>
+                           </li>
+                    </ul>
+                </div>
+
+                <div class="footer-menu row col-7 col-md-6 col-sm-12">
+                     <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                         <h3>Về chúng tôi</h3>
+                         <ul>
+                            <li><a href="">Trang chủ</a></li>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="">Sản phẩm</a></li>
+                            <li><a href="">Tin tức</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                         </ul>
+
+                         <div class="footer-social">
+                            <li><a href=""><i class='bx bxl-youtube' ></i></a></li>
+                            <li><a href=""><i class='bx bxl-facebook' ></i></a></li>
+                            <li><a href=""><i class='bx bxl-instagram' ></i></a></li>
+                       </div>
+                     </div>
+
+                     <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                        <h3>Hỗ trợ khách hàng</h3>
+                        <ul>
+                           <li><a href="">Trang chủ</a></li>
+                           <li><a href="">Giới thiệu</a></li>
+                           <li><a href="">Sản phẩm</a></li>
+                           <li><a href="">Tin tức</a></li>
+                           <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                        <h3>Dịch vụ</h3>
+                        <ul>
+                           <li><a href="">Trang chủ</a></li>
+                           <li><a href="">Giới thiệu</a></li>
+                           <li><a href="">Sản phẩm</a></li>
+                           <li><a href="">Tin tức</a></li>
+                           <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </div>
+
+                    
+
+                </div>
+
+               
+            </div>
+        </div>
+    </div>
+  
+
+    <script src="./app.js"></script>
+    
+</body>
+</html>

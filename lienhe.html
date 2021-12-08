@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ | Temp Claten</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./grid.css">
+    <link rel="stylesheet" href="./responsible.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<head>
+    <style>
+
+.bread-crumb {
+    display: flex;
+    text-align: center;
+    background-color: #fff;
+    padding: 45px 0;
+}
+
+.bread-crumb ul li{
+    float: left;
+    padding: 5px;
+    line-height: 15px;
+    color: #f97e6c;
+    
+}
+.bread-crumb ul li a{
+    color:black;
+}
+.bread-crumb ul li a :hover{
+    color: #f97e6c;
+}
+
+section{
+    display: block;
+}
+.d-none{
+    display: none!important;
+}
+.container {
+    margin : 0 auto;
+    padding: 0 10%;
+}
+.container h2{
+    text-align: center;
+    padding: 20px 0;
+    color: #494949;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.container h4{
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 24px;
+    font-weight: bold;
+    color: #494949;
+}
+.container h6{
+    font-size: 18px;
+    margin-top: 35px;
+    font-weight: bold;
+    color: #494949;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.contact-item{
+    margin-top: 30px;
+    display: flex;
+    justify-items: center;
+}
+.contac-icon{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: #f97e6c;
+    margin-right: 20px;
+    
+}
+.contac-icon i{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.contact-page .contact-item  a{
+    color: black;
+}
+.contact-page .contact-item  a :hover{
+    color: #f97e6c;
+}
+.p-content{
+    margin: 10px 0 30px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #656565;
+}
+input[type=text], textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit]{
+    background-color: #f97e6c;
+    color: #fff;
+    padding: 15px 60px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+input[type=submit]:hover{
+    background-color:#656565;
+}
+
+.map{
+            
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+.footer{
+    margin-top: 15px;
+}
+    
+
+</style>
+    
+    
+</head>
+<body>
+
+
+    <div class="navbar"> 
+        <div class="navbar-wrapper">
+            <a class="logo">
+                <img src="images/logo.png" alt="">
+            </a>
+    
+            <div class="navbar-menu mobile-menu">
+                <i class='bx bx-x mobile-close-icon'></i>
+                <li class="navbar-menu-item"><a href="#">Trang chủ</a></li>
+                <li class="navbar-menu-item"><a href="#">Giới thiệu</a></li>
+                <li class="navbar-menu-item"><a href="#">Sản phẩm <i class='bx bxs-down-arrow navbar-menu-icon'></i></a>
+                    <ul class="navbar-sub-menu">
+                        <li class="navbar-sub-menu-item"><a href="">Đồng hồ nam</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Đồng hồ nữ</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Đồng hồ mới về</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Phụ kiện nam</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Phụ kiện nữ</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-menu-item"><a href="#">Tin tức</a></li>
+                <li class="navbar-menu-item"><a class = 'active' href="#">Liên hệ</a></li>
+            </div>
+    
+            <div class="navbar-icon">
+                 <li class="navbar-icon-item"><a href=""><i class='bx bx-search-alt'></i></a></li>
+                 <li class="navbar-icon-item"><a href=""><i class='bx bx-user'></i></a></li>
+                 <li class="navbar-icon-item"><a href="#"><i class='bx bx-shopping-bag bx-tada ' ></i></a></li>   
+                 <li class="navbar-icon-item"><a href="#"><i class='bx bx-menu-alt-right menu-icon'></i></a></li>   
+
+            </div>
+        </div>
+        <section class="bread-crumb">
+            <div class="container">
+                <ul class="breadcrumb" >					
+                    <li >
+                        <a  href="/" title="Trang chủ">
+                            <strong itemprop="name">Trang chủ </strong>
+                            <h8>/</h8>
+                        </a>
+                    </li>
+                    <li >
+                        
+                        <strong itemprop="name"> Liên Hệ</strong>
+                    </li>
+                </ul>
+            </div>
+            
+        </section>
+        <h1 class="d-none">Liên Hệ</h1>
+        <div class="modal"></div>
+    </div>
+
+
+
+    <div class="container contact">
+        <h2>Bản Đồ Cửa Hàng</h2>
+    
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9042744516187!2d105.81368901459645!3d21.036515885994156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab128b45bf23%3A0xd1d32b58169417cd!2zMjY2IMSQ4buZaSBD4bqlbiwgTGnhu4V1IEdpYWksIEJhIMSQw6xuaCwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1637568384633!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    
+        <h2>Liên Hệ Với Chung Tôi</h2>
+        <div class="wrapper row">
+            <div class="col-md-6 col-6 ">
+                <h4>Thông Tin Liên Hệ</h4>
+                <p class="p-content">
+                    Bạn hãy điền nội dung tin nhắn vào form dưới đây và gửi cho chúng tôi. Chúng tôi sẽ trả lời bạn sau khi nhận được.
+                </p>
+            <form action="/index.html">
+            <div class="row">
+                <div class="col-12 col-md-12 col-sm-12">
+                    <label for="fname"></label>
+                    <input type="text" id="fname" name="first name" placeholder="Họ và Tên">
+                </div>
+                <div class="col-6 col-md-6 col-sm-12">
+                    <label for="pphone"></label>
+                    <input type="text" id="pphone" name="pphone" placeholder="Số điện thoại">
+                </div>
+                <div class="col-6 col-md-6 col-sm-12">
+                    <label for="pemail"></label>
+                    <input type="text" id="pemail" name="pemail" placeholder="Email">
+                </div>
+                <div class="col-12 col-md-12 col-sm-12">
+                    <label for="subject"></label>
+                    <textarea id="subject" name="subject" placeholder="Nội dung" style="height:120px"></textarea>
+                </div>
+                <input type="submit" value="Gửi tin nhắn">
+             
+            </div>
+            </form>
+            </div>
+            <div class="col-md-6 col-6 ">
+                <h6>Cửa Hàng Đồng Hồ Claten</h6>
+                <ul class="contact-page">
+                    <li class="contact-item">
+                        <div class="contac-icon">
+                            <i class="bx bxs-map">
+                            
+                            </i>
+                        </div>
+                        <p>
+                            Tầng 6, Tòa nhà Ladeco, 266 Đội Cấn, Phường Liễu Giai, Quận Ba Đình,</br> TP Hà Nội
+                        </p>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contac-icon">
+                            <i class="bx bxs-time-five">
+
+                            </i>
+                        </div>
+                        <p>
+                            Giờ làm việc: Từ 9:00 đến 22:00 các ngày trong tuần từ Thứ 2 đến Chủ nhật
+                        </p>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contac-icon">
+                            <i class="bx bxs-phone">
+
+                            </i>
+                        </div>
+                        <a   href="/">19006750</a>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contac-icon">
+                            <i class="bx bxs-envelope">
+                            
+                            </i>
+                        </div>
+                        <a href="/">support@sapo.vn</a>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contac-icon">
+                            <i class="bx bxs-link">
+                            
+                            </i>
+                        </div>
+                        <a href="/" title="claten.net">Claten.net</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="footer-contact">
+            <div class="container">
+                <div class= "footer-contact-content row">
+                    <h3 class="col-6 col-md-6 col-sm-12">NHẬN THÔNG TIN KHUYẾN MÃI TỪ CHÚNG TÔI</h3>
+                    <div class="form col-6 col-md-6 col-sm-12">
+                        <input type="text" placeholder="Nhập email của bạn tại đây"><a href="">Gửi</a></input>
+                       
+                    </div>
+                    
+                </div>
+
+            </div>
+         
+         </div>
+        <div class="container">
+           
+            <div class="wrapper row ">
+                <div class="footer-logo row col-5 col-md-6 col-sm-12">
+                    <a class="footer-img">
+                        <img src="images/logo.png" alt="">
+                    </a> 
+
+                    <ul class="footer-des">
+                           <li class="footes-des-item">
+                               <div class="footer-des-icon">
+                                    <i class='bx bxs-map'></i>
+                               </div>
+                               <p>Tầng 6, Tòa nhà Ladeco, 266 Đội Cấn,<br> Phường Liễu Giai, Quận Ba Đình, TP Hà Nội</p>
+                           </li>
+                           <li class="footes-des-item">
+                                <div class="footer-des-icon">
+                                    <i class='bx bxs-time-five' ></i>
+                                </div>
+                               <p>Giờ làm việc: Từ 9:00 đến 22:00 các ngày <br>trong tuần từ Thứ 2 đến Chủ nhật</p>
+                           </li>
+                           <li class="footes-des-item">
+                            <div class="footer-des-icon">
+                                <i class='bx bxs-phone' ></i>
+                             </div>
+                               <p>Hotline<br>
+                                   <span>19006750</span>
+                               </p>
+                           </li>
+                    </ul>
+                </div>
+
+                <div class="footer-menu row col-7 col-md-6 col-sm-12">
+                     <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                         <h3>Về chúng tôi</h3>
+                         <ul>
+                            <li><a href="">Trang chủ</a></li>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="">Sản phẩm</a></li>
+                            <li><a href="">Tin tức</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                         </ul>
+
+                         <div class="footer-social">
+                            <li><a href=""><i class='bx bxl-youtube' ></i></a></li>
+                            <li><a href=""><i class='bx bxl-facebook' ></i></a></li>
+                            <li><a href=""><i class='bx bxl-instagram' ></i></a></li>
+                       </div>
+                     </div>
+
+                     <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                        <h3>Hỗ trợ khách hàng</h3>
+                        <ul>
+                           <li><a href="">Trang chủ</a></li>
+                           <li><a href="">Giới thiệu</a></li>
+                           <li><a href="">Sản phẩm</a></li>
+                           <li><a href="">Tin tức</a></li>
+                           <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                        <h3>Dịch vụ</h3>
+                        <ul>
+                           <li><a href="">Trang chủ</a></li>
+                           <li><a href="">Giới thiệu</a></li>
+                           <li><a href="">Sản phẩm</a></li>
+                           <li><a href="">Tin tức</a></li>
+                           <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </div>
+
+                    
+
+                </div>
+
+               
+            </div>
+        </div>
+    </div>
+  
+
+    <script src="./app.js"></script>
+
+
+    
+</body>
+</html>
