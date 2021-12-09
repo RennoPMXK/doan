@@ -1624,12 +1624,13 @@ function AddToBill(){
 
      var bill_arr = JSON.parse(localStorage.getItem('bill'))
       let mahd = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 8).toUpperCase()
-      
+      var today = new Date()
+      var day =  String(today.getDate())+"/"+String(today.getMonth())+"/"+String(today.getFullYear())
           var Bill1 = {
                mahd: mahd,
                makh: makh , 
                manv : Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 8).toLocaleUpperCase(),
-               ngayhd : new Date(),
+               ngayhd : day,
                tongtien : AddToDetailBill(mahd ,makh),
                xuly : 0
                };
