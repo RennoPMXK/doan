@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/44c01e1bca.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #fffbfb;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ddd;
+  color: black;
+}
+.notification {  
+  color: white;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+.notification .badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 3px 6px;
+  border-radius: 20%;
+  background-color: red;
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+<div style="margin-left:20%">
+    <div class="topnav" id="myTopnav">
+    <a href="#">
+        <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="active">Home</a>
+    <a href="#contact">Contact</a>
+    
+
+    <a href="#" style="float:right">
+        <i class="fas fa-th-large"></i>
+    </a>
+    <a href="#" style="float:right; margin-right: 10px;">
+        <i class="fas fa-expand-arrows-alt"></i>
+    </a>
+    <a href="#" class="notification" style="float:right;">
+        <i class="far fa-bell"></i>
+        <small class="badge" style="font-size: 10px;">5</small>
+    </a>
+    <div>
+    <a href="#" class="notification" style="float:right;">
+        <i class="far fa-comments"></i>
+        <small class="badge" style="font-size: 10px;">3</small>
+    </a>
+</div>
+    
+    <div class="search-container" style="float:right">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Search.." style="padding: 10px; margin: auto; border: none;font-size:22px;display:none ; border-radius:30px">
+            <a href="#" style="float:right;">
+                <i class="fas fa-search"></i>
+            </a>
+        </form>
+    </div>
+    </div>
+</div>
+
+
+</body>
+</html>

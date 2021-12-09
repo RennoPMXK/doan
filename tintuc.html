@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./grid.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsible.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+    
+    
+    @media (max-width: 725px) {
+    .row {
+        flex-direction: column;
+    }
+    .col-25 {
+        margin-bottom: 20px;
+    }
+    }
+    .col-50 {  
+    flex: 50%;
+    }
+    .col-33{
+        flex:33%
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-wrapper">
+            <a class="logo">
+                <img src="./img/logo.png" alt="">
+            </a>
+    
+            <div class="navbar-menu mobile-menu">
+                <i class='bx bx-x mobile-close-icon'></i>
+                <li class="navbar-menu-item"><a class = 'active' href="#">Trang chủ</a></li>
+                <li class="navbar-menu-item"><a href="#">Giới thiệu</a></li>
+                <li class="navbar-menu-item"><a href="#">Sản phẩm <i class='bx bxs-down-arrow navbar-menu-icon'></i></a>
+                    <ul class="navbar-sub-menu">
+                        <li class="navbar-sub-menu-item"><a href="">Đồng hồ nam</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Đồng hồ nữ</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Đồng hồ mới về</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Phụ kiện nam</a></li>
+                        <li class="navbar-sub-menu-item"><a href="">Phụ kiện nữ</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-menu-item"><a href="#">Tin tức</a></li>
+                <li class="navbar-menu-item"><a href="#">Liên hệ</a></li>
+            </div>
+    
+            <div class="navbar-icon">
+                 <li class="navbar-icon-item"><a href=""><i class='bx bx-search-alt'></i></a></li>
+                 <li class="navbar-icon-item"><a href=""><i class='bx bx-user'></i></a></li>
+                 <li class="navbar-icon-item"><a href="#"><i class='bx bx-shopping-bag bx-tada ' ></i></a></li>   
+                 <li class="navbar-icon-item"><a href="#"><i class='bx bx-menu-alt-right menu-icon'></i></a></li>   
+
+            </div>
+        </div>
+        <div class="modal"></div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="picture">
+        <a href="#" >                         
+            <img src="https://bizweb.dktcdn.net/100/438/171/themes/836357/assets/img_banner_brea_blog.jpg?1635349608220" width="100%" alt="Claten" >
+       </a>
+    </div>
+    <div class="content" style="padding-left:10%; padding-right:10%;padding-top:30px">
+        <div class= row>
+            <div class= "col-50">
+                <a href="#">
+                    <img style="display:block" src="https://bizweb.dktcdn.net/thumb/grande/100/438/171/articles/t7.jpg?v=1632731778567" width="100%s" alt="Cách chọn mua dây da đồng hồ theo phong thủy mà bạn nên biết" >
+                </a>
+            </div>
+
+            <div class= "col-50" >
+                <a href="#"><h3 style="color:black">Cách chọn mua dây da đồng hồ theo phong thủy mà bạn nên biết</h3></a>
+                <div style="padding-top:10px">
+                    Người mệnh Kim Mặt đồng hồ có dạng hình tròn, hình oval, hình elip tượng trưng cho hành kim, 
+                    bạn nên chọn những kiểu hình mặt đồng hồ này để tương hợp với bản mệnh. Dây đeo màu nâu, vàng, vàng 
+                    bò tượng trưng cho hành thổ (Thổ sinh Kim) sẽ rất hợp với người mệnh Kim. Đeo dây màu nâu man...                    
+                </div>
+                <div style="padding-top:10px">
+                    <a href="#" title="Xem thêm">
+                        <small style="color:black">
+                            Xem thêm
+                        </small>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="11" viewBox="0 0 19 11" fill="none">
+                            <path d="M13.0638 9.1707C12.8731 9.35708 12.8731 9.66385 13.0638 9.85023C13.2484 10.0307 13.5433 10.0307 13.7279 9.85023L17.7215 5.94695C17.9724 5.70177 17.9724 5.2982 17.7215 5.05301L13.7279 1.14977C13.5433 0.969332 13.2484 0.969332 13.0638 1.14977C12.8731 1.33614 12.8731 1.64292 13.0638 1.82929L15.6793 4.38568C15.9197 4.62065 15.7534 5.02886 15.4172 5.02886L1.34615 5.02885C1.08594 5.02885 0.875 5.2398 0.875 5.50001C0.875 5.76022 1.08594 5.97116 1.34615 5.97116L15.4172 5.97117C15.7533 5.97117 15.9197 6.37938 15.6793 6.61435L13.0638 9.1707Z" fill="#F97E6C" stroke="#F97E6C" stroke-width="0.25"></path>
+                        </svg>
+                    </a>   
+                </div>       
+            </div>
+        </div>
+        <div style="margin-top:10px; border-top: 1px solid #ccc"></div>
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+        
+        <ul >
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t8.jpg?v=1632731806863"  alt="Cách phối dây da đơn giản mà cực kỳ hiệu quả" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Cách phối dây da đơn giản mà cực kỳ hiệu quả
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Tin tức</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t6.jpg?v=1632731735470"  alt="Hướng dẫn cách lên dây cót đồng hồ cơ đúng cách" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Hướng dẫn cách lên dây cót đồng hồ cơ đúng cách
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Hướng dẫn</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t5.jpg?v=1632731702533"  alt="Mẹo nhỏ giúp bạn bảo quản và sử dụng đồng hồ đeo tay đúng cách" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Mẹo nhỏ giúp bạn bảo quản và sử dụng đồng hồ đeo tay đúng cách
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Mẹo vặt</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t4.jpg?v=1632731610123"  alt="Cách chỉnh ngày giờ trên đồng hồ 6 kim 3 nút đơn giản" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Cách chỉnh ngày giờ trên đồng hồ 6 kim 3 nút đơn giản
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Hướng dẫn</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t3.jpg?v=1632731554247"  alt="Cách làm mềm dây da đồng hồ, dễ chịu khi đeo" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Cách làm mềm dây da đồng hồ, dễ chịu khi đeo
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Mẹo vặt</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t2.jpg?v=1632731475247"  alt="Hướng dẫn cách dùng đồng hồ G-shock để tìm điện thoại" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Hướng dẫn cách dùng đồng hồ G-shock để tìm điện thoại
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Hướng dẫn</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/grande/100/438/171/articles/t1.jpg?v=1632730894280"  alt="Cách đánh bóng mặt kính đồng hồ bị xước hiệu quả" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Cách đánh bóng mặt kính đồng hồ bị xước hiệu quả
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Mẹo vặt</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- ------------------------------------------------------------------------------------------------- -->
+
+    <div class="footer">
+        <div class="footer-contact">
+            <div class="container">
+                <div class= "footer-contact-content row">
+                    <h3 class="col-6 col-md-6 col-sm-12">NHẬN THÔNG TIN KHUYẾN MÃI TỪ CHÚNG TÔI</h3>
+                    <div class="form col-6 col-md-6 col-sm-12">
+                        <input type="text" placeholder="Nhập email của bạn tại đây"><a href="">Gửi</a></input>
+                       
+                    </div>
+                    
+                </div>
+
+            </div>
+         
+         </div>
+        <div class="container">
+           
+            <div class="wrapper row ">
+                <div class="footer-logo row col-5 col-md-6 col-sm-12">
+                    <a class="footer-img">
+                        <img src="./img/logo.png" alt="">
+                    </a> 
+
+                    <ul class="footer-des">
+                           <li class="footes-des-item">
+                               <div class="footer-des-icon">
+                                    <i class='bx bxs-map'></i>
+                               </div>
+                               <p>Tầng 6, Tòa nhà Ladeco, 266 Đội Cấn,<br> Phường Liễu Giai, Quận Ba Đình, TP Hà Nội</p>
+                           </li>
+                           <li class="footes-des-item">
+                                <div class="footer-des-icon">
+                                    <i class='bx bxs-time-five' ></i>
+                                </div>
+                               <p>Giờ làm việc: Từ 9:00 đến 22:00 các ngày <br>trong tuần từ Thứ 2 đến Chủ nhật</p>
+                           </li>
+                           <li class="footes-des-item">
+                            <div class="footer-des-icon">
+                                <i class='bx bxs-phone' ></i>
+                             </div>
+                               <p>Hotline<br>
+                                   <span>19006750</span>
+                               </p>
+                           </li>
+                    </ul>
+                </div>
+
+                <div class="footer-menu row col-7 col-md-6 col-sm-12">
+                     <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                         <h3>Về chúng tôi</h3>
+                         <ul>
+                            <li><a href="">Trang chủ</a></li>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="">Sản phẩm</a></li>
+                            <li><a href="">Tin tức</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                         </ul>
+
+                         <div class="footer-social">
+                            <li><a href=""><i class='bx bxl-youtube' ></i></a></li>
+                            <li><a href=""><i class='bx bxl-facebook' ></i></a></li>
+                            <li><a href=""><i class='bx bxl-instagram' ></i></a></li>
+                       </div>
+                     </div>
+
+                     <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                        <h3>Hỗ trợ khách hàng</h3>
+                        <ul>
+                           <li><a href="">Trang chủ</a></li>
+                           <li><a href="">Giới thiệu</a></li>
+                           <li><a href="">Sản phẩm</a></li>
+                           <li><a href="">Tin tức</a></li>
+                           <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                        <h3>Dịch vụ</h3>
+                        <ul>
+                           <li><a href="">Trang chủ</a></li>
+                           <li><a href="">Giới thiệu</a></li>
+                           <li><a href="">Sản phẩm</a></li>
+                           <li><a href="">Tin tức</a></li>
+                           <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </div>
+
+                    
+
+                </div>
+
+               
+            </div>
+        </div>
+    </div>
+  
+
+    
+</body>
+</html>
