@@ -31,6 +31,14 @@ navbarItem[2].addEventListener('click', function(){
 
 })
 
+document.getElementsByClassName('btn-modal-cart')[1].onclick = function(){
+    
+          modal.classList.remove('active');
+          modalCart.style.display = 'none';   
+    
+     
+}
+
 Register.addEventListener('click', function(){
      modalSignUp.style.display = 'block';
      modalLogin.style.display = 'none';
@@ -1625,7 +1633,7 @@ function AddToBill(){
      var bill_arr = JSON.parse(localStorage.getItem('bill'))
       let mahd = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 8).toUpperCase()
       var today = new Date()
-      var day =  String(today.getDate())+"/"+String(today.getMonth())+"/"+String(today.getFullYear())
+      var day =  String(today.getDate())+"/"+String(today.getMonth() + 1)+"/"+String(today.getFullYear())
           var Bill1 = {
                mahd: mahd,
                makh: makh , 
