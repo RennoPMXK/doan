@@ -1284,15 +1284,13 @@ function createnewuser(fullname, password , email)
         flag = 1   
      }     
            if(flag==1){
-               var today = new Date()
-               var day =  String(today.getDate())+"/"+String(today.getMonth() + 1)+"/"+String(today.getFullYear())
                var user1 = {
                     username: fullname , 
                     password: password , 
                     email : email,
                     makh : Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 8).toUpperCase(),
                     userType: 'Customer',
-                    datesignup: day
+                    datesignup: new Date()
                     };
   
               userArray.push(user1);

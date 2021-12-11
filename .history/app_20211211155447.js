@@ -1223,7 +1223,6 @@ function updateCart() {
                     var cartRow = cartRows[i]
                     var quantityElm = cartRow.getElementsByClassName('quantityCart')[0]
                          var priceElm = cartRow.querySelector('#price')
-                         var pricetotal = cartRow.querySelector('#price-total')
                          var price = parseFloat(priceElm.innerText.replace('đ', ''))
                          var quantity = quantityElm.value
                          
@@ -1231,10 +1230,9 @@ function updateCart() {
                         
      
                     
-                         pricetotal.innerHTML = `${((price *quantity)*1000000).toFixed(0)}đ`
+                    
                     
                }
-              
              total = (total*1000000)
              var x = Math.round(total)
      }
@@ -1284,15 +1282,13 @@ function createnewuser(fullname, password , email)
         flag = 1   
      }     
            if(flag==1){
-               var today = new Date()
-               var day =  String(today.getDate())+"/"+String(today.getMonth() + 1)+"/"+String(today.getFullYear())
                var user1 = {
                     username: fullname , 
                     password: password , 
                     email : email,
                     makh : Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 8).toUpperCase(),
                     userType: 'Customer',
-                    datesignup: day
+                    datesignup: new Date()
                     };
   
               userArray.push(user1);
@@ -1425,7 +1421,7 @@ function Register2() {
      let email = document.getElementById('RegisterForm-email').value;
      let password = document.getElementById('RegisterForm-pass').value;
  
-     if (name.length == 0 || confirmpass !== password || email.length == 0 || password.length < 8 || !(email.includes('@')) || password.length > 16) {
+     if (name.length == 0 || confirmpass !== password || email.length == 0 || password.length < 8 || !(email.includes('@'))) {
          if (name.length == 0) {
              document.getElementById('errorName').style.display = 'block';
              document.getElementById('RegisterForm-name').style.border = '1px solid red';
@@ -1450,11 +1446,11 @@ function Register2() {
              document.getElementById('errorEmailRegister').style.display = 'none';
              document.getElementById('RegisterForm-email').style.border = '1px solid #ccc';
          }
-         if (password.length < 8 || password.length > 16) {
+         if (password.length < 8) {
              document.getElementById('errorPassRegister').style.display = 'block';
              document.getElementById('RegisterForm-pass').style.border = '1px solid red';
          }
-         if (password.length >= 8 && password <= 16) {
+         if (password.length >= 8) {
              document.getElementById('errorPassRegister').style.display = 'none';
              document.getElementById('RegisterForm-pass').style.border = '1px solid #ccc';
          }
@@ -1502,6 +1498,8 @@ function timKiem() {
  }
  
  function timKiemNangCao() {
+     let searchContent = document.getElementsByClassName('search-content')[0]
+     let searchContent2 = document.getElementsByClassName('search-content')[1]
      let searchValue = node.value;
      node.value = "";
      let product_sort = product_arr
@@ -1554,21 +1552,9 @@ function timKiem() {
           dem++
          tmp.push(product_sort[i])
          
-         
+         // Đưa sản phẩm vào giao diện
               
           
-     }
-     if(dem==0){
-          document.getElementsByClassName('search-top')[0].style.display = 'none';
-          document.getElementsByClassName('search-content')[0].style.display = 'none';
-          document.getElementsByClassName('search-pagination')[0].style.display = 'none';
-          document.getElementsByClassName('no-search')[0].style.display = 'flex'
-
-     }else {
-          document.getElementsByClassName('search-top')[0].style.display = 'flex';
-          document.getElementsByClassName('search-content')[0].style.display = 'flex';
-          document.getElementsByClassName('search-pagination')[0].style.display = 'flex';
-          document.getElementsByClassName('no-search')[0].style.display = 'none'
      }
      handlePageSearch(1 , tmp)
          document.querySelector('.num-result span').innerText = dem
@@ -1738,9 +1724,9 @@ function InnerBill(makh){
      <th width="170px" height="40px" >Mã đơn hàng</th>
      <th width= "480px">Chi tiết</th>
      <th width= "170px">Ngày mua</th>
-     <th width= "250px">Phương thức thanh toán</th>
+     <th width= "170px">Đơn vị vận chuyển</th>
 
-     <th width= "170px">Thành tiền</span></th>
+     <th width= "170px">Thành tiền</th>
      </tr>
      `
      for(let i = 0; i < bill_arr.length; i++){
@@ -1755,7 +1741,7 @@ function InnerBill(makh){
                          if(detailBill_arr[j].mahd == bill_arr[i].mahd && detailBill_arr[j].makh == makh){
                               
                               detail += `
-                              ${detailBill_arr[j].tensp} x <span>${detailBill_arr[j].sl}</span> 
+                              ${detailBill_arr[j].tensp} x ${detailBill_arr[j].sl} 
                           `
                          }
                          

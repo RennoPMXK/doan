@@ -1223,7 +1223,6 @@ function updateCart() {
                     var cartRow = cartRows[i]
                     var quantityElm = cartRow.getElementsByClassName('quantityCart')[0]
                          var priceElm = cartRow.querySelector('#price')
-                         var pricetotal = cartRow.querySelector('#price-total')
                          var price = parseFloat(priceElm.innerText.replace('đ', ''))
                          var quantity = quantityElm.value
                          
@@ -1231,10 +1230,9 @@ function updateCart() {
                         
      
                     
-                         pricetotal.innerHTML = `${((price *quantity)*1000000).toFixed(0)}đ`
+                    
                     
                }
-              
              total = (total*1000000)
              var x = Math.round(total)
      }
@@ -1284,15 +1282,13 @@ function createnewuser(fullname, password , email)
         flag = 1   
      }     
            if(flag==1){
-               var today = new Date()
-               var day =  String(today.getDate())+"/"+String(today.getMonth() + 1)+"/"+String(today.getFullYear())
                var user1 = {
                     username: fullname , 
                     password: password , 
                     email : email,
                     makh : Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 8).toUpperCase(),
                     userType: 'Customer',
-                    datesignup: day
+                    datesignup: new Date()
                     };
   
               userArray.push(user1);
@@ -1502,6 +1498,8 @@ function timKiem() {
  }
  
  function timKiemNangCao() {
+     let searchContent = document.getElementsByClassName('search-content')[0]
+     let searchContent2 = document.getElementsByClassName('search-content')[1]
      let searchValue = node.value;
      node.value = "";
      let product_sort = product_arr
@@ -1554,21 +1552,9 @@ function timKiem() {
           dem++
          tmp.push(product_sort[i])
          
-         
+         // Đưa sản phẩm vào giao diện
               
           
-     }
-     if(dem==0){
-          document.getElementsByClassName('search-top')[0].style.display = 'none';
-          document.getElementsByClassName('search-content')[0].style.display = 'none';
-          document.getElementsByClassName('search-pagination')[0].style.display = 'none';
-          document.getElementsByClassName('no-search')[0].style.display = 'flex'
-
-     }else {
-          document.getElementsByClassName('search-top')[0].style.display = 'flex';
-          document.getElementsByClassName('search-content')[0].style.display = 'flex';
-          document.getElementsByClassName('search-pagination')[0].style.display = 'flex';
-          document.getElementsByClassName('no-search')[0].style.display = 'none'
      }
      handlePageSearch(1 , tmp)
          document.querySelector('.num-result span').innerText = dem

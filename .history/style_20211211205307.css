@@ -255,12 +255,6 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #AEAEAE;
-    padding: 40px;
-}
-
-.no-search h3:first-of-type {
-    margin-top: -60px;
 }
 
 .navbar-icon-item a {

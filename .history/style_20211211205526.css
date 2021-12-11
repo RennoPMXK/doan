@@ -255,8 +255,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #AEAEAE;
-    padding: 40px;
+    color: var(--orangeprime);
 }
 
 .no-search h3:first-of-type {
