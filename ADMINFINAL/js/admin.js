@@ -464,6 +464,7 @@ function saveImageAndTurnBack () {
     showOrHideOrFlex('modify-img', 'none');
     showOrHideOrFlex('add-nick-field-id', 'flex');
     showOrHideOrFlex('productlist', 'block');
+    displayProductDict();
 }
 function cancelAndTurnBack(position) {
     var productDict = JSON.parse(localStorage.getItem('product'));
@@ -554,22 +555,28 @@ function addProduct() {
                         alert("This ID's already in the database. Try another one please.");
                         return;
                     }
-                if (id == '' || isNaN(id)){
-                    alert("ID Valid !")
-                }else {
+                if (id != ''){
+        
                     productDict[i].id = id ;
+                    
+                    
                 }
                    
-                if (ten != '')
+                if (ten != ''){
                     productDict[i].ten = ten ;
+                    
+                }
+
                 if (giacu == "" || isNaN(giacu)){
                     alert("Old Price Valid !")
+                    
                 }else {
                     productDict[i].giacu = giacu ;
                 }
                     
-                if (giamoi == '' || isNaN(giamoi)){
+                if (giamoi != '' || isNaN(giacu)){
                     alert("New Price Valid!")
+                    
                 }else{
                     productDict[i].giamoi = giamoi ;
                 }
