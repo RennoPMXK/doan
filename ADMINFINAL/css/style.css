@@ -377,21 +377,47 @@ li a {
         cursor: pointer;
         border:none;
         background:none;  
-        font-size: 2rem;
+        font-size: 1.7rem;
         transform: translate(0%, -50%);
         margin-left: 28.5rem;
         margin-top:0.5rem;
+        color:rgb(250, 74, 74);  
     }
     .delete:hover {
-        background-color: rgb(192, 192, 192);
-        border-radius: 5rem;
+        /* background-color: rgb(192, 192, 192);
+        border-radius: 100px; */
         position: absolute;
         cursor: pointer;
         border:none;
-        font-size: 2rem;
+        font-size: 2.2rem;
         transform: translate(0%, -50%);
         margin-left: 28.5rem;
         margin-top:0.5rem;
+        
+    }
+
+    .deletegood {
+        position: absolute;
+        cursor: pointer;
+        border:none;
+        background:none;  
+        font-size: 1.7rem;
+        transform: translate(0%, -50%);
+        margin-left: 28.5rem;
+        margin-top:0.5rem;
+        color:rgb(250, 74, 74);  
+    }
+    .deletegood:hover {
+        /* background-color: rgb(192, 192, 192);
+        border-radius: 100px; */
+        position: absolute;
+        cursor: pointer;
+        border:none;
+        font-size: 2.2rem;
+        transform: translate(0%, -50%);
+        margin-left: 28.5rem;
+        margin-top:0.5rem;
+        
     }
     
     .edit{
@@ -399,16 +425,19 @@ li a {
         cursor: pointer;
         border:none;
         background:none;    
+        font-size: 1.7rem;
         transform: translate(0%, -50%);
         margin-left: 28.5rem;
         margin-top:0.5rem;
+        color:rgba(226, 230, 18, 0.979); 
     }
     .edit:hover{
-        background-color: rgb(192, 192, 192);
-        border-radius: 5rem;
+        /* background-color: rgb(192, 192, 192);
+        border-radius: 5rem; */
         position: absolute;
         cursor: pointer;
         border:none;
+        font-size: 2.2rem;
         transform: translate(0%, -50%);
         margin-left: 28.5rem;
         margin-top:0.5rem;
@@ -448,6 +477,24 @@ li a {
 }
 #add-product-but{}
 /*}*/
+
+.editImg{    
+    margin-top: 0.25rem;
+    cursor: pointer;
+    border:none;
+    background:none;    
+    font-size: 1rem;
+    transform: translate(0%, -50%);    
+    color:#06D66B; 
+}
+    
+
+.editImg :hover{    
+    cursor: pointer;
+    border:none;
+    font-size: 1.1rem;
+    transform: translate(0%, -50%);    
+}
 #modify_img {
     display: flex;
     flex-direction: column;

@@ -123,8 +123,8 @@ function displayUserDict() {
             <div style="margin-left: 2.5rem">${UserDict[i].email} </div>
             <div style="margin-left: 21rem">${UserDict[i].username}</div>
             <div style="margin-left: 33rem">${UserDict[i].password}</div>
-            <button style="margin-left: 41rem" id="deletebut${i}" class="delete" onClick="deleteUser('${UserDict[i].username}')"><box-icon name='x'></box-icon></button>
-            <button style="margin-left: 46rem" id="editbut" class="edit" onClick="editUser('${UserDict[i].username}')"><box-icon type='solid' name='edit'></box-icon></button>
+            <button style="margin-left: 41rem" id="deletebut${i}" class="delete" onClick="deleteUser('${UserDict[i].username}')"><i class="far fa-trash-alt"></i></button>
+            <button style="margin-left: 46rem" id="editbut" class="edit" onClick="editUser('${UserDict[i].username}')"><i class="fas fa-user-edit"></i></button>
             <div style="margin-left: 52rem">${UserDict[i].datesignup}</div>
             <button  style="margin-left: 60rem" class='user-type-but-${UserDict[i].userType}' id='user-type-but-id-${i}' onclick="switchUserType(${i})">${UserDict[i].userType}</button>
         </div>`
