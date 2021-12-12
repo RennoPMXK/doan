@@ -60,12 +60,13 @@ li a {
 .col-nav-bar {
     align-items: center;
     margin-left: -0.5rem;
-    margin-top: -0.5rem;
+    margin-top: -0.5rem;    
     color: var(--primary-white);
-    background-color: var(--primary-black);
+    background-color: #4618AC;
+    /* background-color:blue */
     display: flex;
     flex-direction: column;
-    width: 20rem;
+    width: 20.1rem;
     bottom: 0;
     float: none;
     left: 0;
@@ -93,7 +94,7 @@ li a {
     border-radius: 2rem;
 }
 .slogan {
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 1rem;
     width: 12rem;
     margin-left: 0.75rem;
@@ -113,8 +114,8 @@ li a {
     height: 2.5rem;
     width: 2.5rem;
     margin: 0.25rem;
-    border: white solid 2px;
-    border-radius: 0.1rem;
+    border: white solid 2px ;
+    border-radius: 100px;
 }
 .name {
     margin-left: 0.75rem;
@@ -190,7 +191,7 @@ li a {
 /**/.topnav {
         margin-top: -1rem;
 /**/    overflow: hidden;
-/**/    background-color: black;
+/**/    background-color: rgb(111, 113, 241);
 /**/}
 /**/  
 /**/.topnav a {
@@ -205,6 +206,7 @@ li a {
 /**/  
 /**/.topnav a:hover {
 /**/    background-color: #f2f2f2;
+        
 /**/    color: black;
 /**/}
 /**/  
@@ -223,8 +225,9 @@ li a {
 /**/    background-image: url('/assets/search.png');
 /**/    background-position: 10px 12px; 
 /**/    background-repeat: no-repeat;
-/**/    padding: 12px 20px 10px 40px;
-/**/    margin-top: 3px;        
+/**/    padding: 12px 20px 10px 20px;
+/**/    margin-top: 3px;   
+             
 /**/    outline: none;
 /**/}
 /**/input[id=search]:focus {
@@ -275,6 +278,7 @@ li a {
     margin-left: 15px;
     margin-top: 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 

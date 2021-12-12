@@ -2,14 +2,14 @@ var temp = 0 ;
 function showColNavBar() {
     ++temp ;
     if (temp%2==1) {
-        document.getElementById('col-nav-bar-id').style.marginLeft = '-20rem' ;
+        document.getElementById('col-nav-bar-id').style.marginLeft = '-25rem' ;
         // document.getElementById('col-nav-bar-id').style.display = 'none' ;
-        document.getElementById('cont-view-id').style.marginLeft = '1rem';
-        document.getElementById('footer-id').style.marginLeft = '1rem';
+        document.getElementById('cont-view-id').style.marginLeft = '-2rem';
+        document.getElementById('footer-id').style.marginLeft = '-2rem';
     } else {
         document.getElementById('col-nav-bar-id').style.marginLeft = '0rem' ;
         // document.getElementById('col-nav-bar-id').style.display = 'flex' ;
-        document.getElementById('cont-view-id').style.marginLeft = '19rem';
+        document.getElementById('cont-view-id').style.marginLeft = '19.4rem';
         document.getElementById('footer-id').style.marginLeft = '19rem';
     }
 };
@@ -116,7 +116,7 @@ function displayUserDict() {
         <div style="margin-left: 50rem"><b>Date created</b></div>
         <div style="margin-left: 60rem"><b>User Type</b></div>
     </div>`;
-    document.getElementById('userlist').style.height = UserDict.length*9 + 'rem';
+    document.getElementById('userlist').style.height = UserDict.length*9+1 + 'rem';
 	for(var i = 0 ; i < UserDict.length; i++)
 		cache += `<div class='table-control'>
             <div style="margin-left: 0rem"> ${String(i+1)} </div>

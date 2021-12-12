@@ -37,6 +37,7 @@
             </div>
             <div class="slogan">Trang Admin</div>
         </div>
+        <div style="border-top: 2px solid white; width:100% "></div>
         <div class="account-info">
             <div class="avatar">
                 <img src="./assets/admin.png"/>
@@ -75,8 +76,8 @@
     </div>
 <!-- =============================================================================== -->
     <div class="cont-view" id='cont-view-id'>
-        <div class="topnav">
-            <a onclick='showColNavBar();'><box-icon name='menu'></box-icon></a>
+        <div class="topnav" style="margin-left: 1rem;">            
+            <a onclick='showColNavBar();'><i class="fa fa-bars"></i></a>        
             <a href="#home">Home</a>
             <a href="#contact">Contact</a>
             <a href="#" style="float:right">
@@ -96,7 +97,7 @@
             </a>
         </div>
             
-            <div class="search-container" style="float:right">
+            <div class="search-container" style="float:right; margin-right: 1rem">
                 <form action="/action_page.php">
                     <input type="text" id="search" placeholder="Search.." >
 
@@ -112,7 +113,7 @@
             <div class="user-dashboard" id="user-dashboard">
                 <div class="add-nick-field" id="add-nick-field-id">
                     <div class="add-nick-left-col">
-                        <div style="margin-right: 40px;"  class="enter-username">
+                        <div style="margin-right: 1rem;margin-left: 1rem;"  class="enter-username">
                             <div id="user-box-1">Username: </div>
                             <form id='user-box-form'>
                                 <input type="text" value="" id="userBox">
@@ -124,7 +125,7 @@
                                 <input  value="" id="passBox">
                             </form>
                         </div>
-                        <div style="margin-right: 40px;" class="enter-fullname">
+                        <div style="margin-right: 1rem;" class="enter-fullname">
                             <div id="name-box-1">Email:</div>
                             <form id='name-box1-form'>
                                 <input type="text" value="" id="nameBox">
