@@ -10,10 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
     <script src="https://kit.fontawesome.com/44c01e1bca.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
-    <link rel="manifest" href="./img/site.webmanifest">
 </head>
 <!-- =============================================================================== -->
 <body>
@@ -24,30 +20,28 @@
         createProduct();
         LoadBill();
         LoaddetailBill(); 
-        InnerBill(bill_arr);
+        InnerBill();
         LoadUser()
     }
 </script>
 
 <div class="super-container">
-    <div class="col-nav-bar" id="col-nav-bar-id" style="">
-        <!-- <div class="logo-slogan">
+    <div class="col-nav-bar" id="col-nav-bar-id">
+        <div class="logo-slogan">
             <div class="logo">
                 <img src="./assets/electron.png"/>
             </div>
             <div class="slogan">Trang Admin</div>
-        </div> -->
-        <!-- <div style="border-top: 2px solid white; width:100% "></div> -->
-        <!-- <div class="account-info">
+        </div>
+        <div class="account-info">
             <div class="avatar">
                 <img src="./assets/admin.png"/>
             </div>
             <div class='name' id='this-username'>Quản trị viên</div>
-        </div> -->
-        <!-- <div class="a-single-line"></div> -->
+        </div>
+        <div class="a-single-line"></div>
 
-        <div style="margin-top:2rem" class="col-nav-space" ></div>
-                
+        
         <ul>
             <li><div class="gen-left-frame">
                 <img class="so-what-img" src="./assets/user.png"/>
@@ -60,12 +54,12 @@
             <div class="gen-left-frame">
                 <img class="so-what-img" src="./assets/pay.png"/>
                 <button class ="gen-left-but" id="invoice-button" onclick='displayChartInterface()'>Sale overview</button>
-            </div> 
+            </div>
             <!-- <div class="feedback-manage-button">
                 <img class="so-what-img" src="./assets/null.jpg"/>
                 <button id="feedback-button" onclick=displayFeedback()>Feedback</button>
             </div> -->
-             <div class="gen-left-frame">
+            <div class="gen-left-frame">
                 <img class="so-what-img" src="./assets/package.png"/>
                 <button class ="gen-left-but" id="invoice-button" onclick='displayProduct()'>Product manager</button>
             </div>
@@ -74,59 +68,11 @@
                 <button class ="gen-left-but" id="log-out-button" onclick='logOutThisUser()'>Log out</button>
             </div>
         </ul>
-    </div> 
-
-
-    <div class="col-nav-bar2" id="col-nav-bar2-id" style="visibility: hidden">
-        <div class="col-nav-space"></div>                
-        <ul>
-            <li style="margin-top:3rem">
-                <div class="gen-left-frame2">                    
-                    <button class ="gen-left-but2" id="user-button" onclick='displayUserDict();callBackUsernameUI()'>
-                        <img class="so-what-img2" src="./assets/user.png"/>
-                    </button>
-                </div>
-            </li>
-            <li style="margin-top:1.2rem">
-                <div class="gen-left-frame2">                    
-                    <button class ="gen-left-but2" id="user-button" onclick='displayDashboard()'>
-                        <img class="so-what-img2"  src="./assets/dashboard.png"/>
-                    </button>
-                </div>
-            </li>
-            <li style="margin-top:1rem" >
-                <div class="gen-left-frame2">                    
-                    <button class ="gen-left-but2" id="invoice-button" onclick='displayChartInterface()'>
-                        <img class="so-what-img2" src="./assets/pay.png"/>
-                    </button>
-                </div> 
-            </li>
-            
-            <li style="margin-top:1.1rem">
-                <div class="gen-left-frame2">                    
-                    <button class ="gen-left-but2" id="invoice-button" onclick='displayProduct()'>
-                        <img class="so-what-img2"  src="./assets/package.png"/>
-                    </button>
-                </div>
-            </li>
-            <li style="margin-top:1.1rem">
-                <div class="gen-left-frame2">
-                    
-                    <button class ="gen-left-but2" id="log-out-button" onclick='logOutThisUser()'>
-                        <img class="so-what-img2"  src="./assets/logOut2.png"/>
-                    </button>
-                </div>
-            </li>
-        </ul>
     </div>
-
-
-
-
 <!-- =============================================================================== -->
     <div class="cont-view" id='cont-view-id'>
-        <div class="topnav">            
-            <a onclick='showColNavBar();'><i class="fa fa-bars"></i></a>        
+        <div class="topnav">
+            <a onclick='showColNavBar();'><box-icon name='menu'></box-icon></a>
             <a href="#home">Home</a>
             <a href="#contact">Contact</a>
             <a href="#" style="float:right">
@@ -146,7 +92,7 @@
             </a>
         </div>
             
-            <div class="search-container" style="float:right; margin-right: 1rem">
+            <div class="search-container" style="float:right">
                 <form action="/action_page.php">
                     <input type="text" id="search" placeholder="Search.." >
 
@@ -162,7 +108,7 @@
             <div class="user-dashboard" id="user-dashboard">
                 <div class="add-nick-field" id="add-nick-field-id">
                     <div class="add-nick-left-col">
-                        <div style="margin-right: 1rem;margin-left: 1rem;"  class="enter-username">
+                        <div style="margin-right: 40px;"  class="enter-username">
                             <div id="user-box-1">Username: </div>
                             <form id='user-box-form'>
                                 <input type="text" value="" id="userBox">
@@ -174,7 +120,7 @@
                                 <input  value="" id="passBox">
                             </form>
                         </div>
-                        <div style="margin-right: 1rem;" class="enter-fullname">
+                        <div style="margin-right: 40px;" class="enter-fullname">
                             <div id="name-box-1">Email:</div>
                             <form id='name-box1-form'>
                                 <input type="text" value="" id="nameBox">
@@ -229,7 +175,7 @@
                 <section id="bill" class="bill">
                     <div class="container">
                      <div class="section-title" >
-                         <h3 style="text-align: center;" >Đơn hàng đã đặt</h3>
+                         <h3>Đơn hàng đã đặt</h3>
                          <div class="title-line"></div>
                      </div>
              
@@ -238,19 +184,6 @@
                             
                              
                       </div>
-
-                     
-
-                      <div id="rightsection">
-                        <div class="subsection">
-                            <h4>TÌM KIẾM</h4>
-                            <form>
-                            <label for="date">Ngày</label>
-                            <input type="text" id="date" value = '0/0/0'>
-                            <button type="button" onclick="searchBill()">Tìm</button>
-                            </form>
-                        </div>
-                    </div>
               </div>
         </section>   
      </div>

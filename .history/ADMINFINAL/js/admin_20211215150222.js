@@ -980,10 +980,10 @@ function LoaddetailBill() {
 
 
 
-var bill_arr = JSON.parse(localStorage.getItem('bill'))
+
 function InnerBill(bill_arr){
     var checkout = document.getElementsByClassName('checkout')[0]
-    
+    var bill_arr = JSON.parse(localStorage.getItem('bill'))
     var detailBill_arr = JSON.parse(localStorage.getItem('detailbill'))
     checkout.innerHTML = `
     <tr  class="checkout-item"> 
@@ -1169,6 +1169,6 @@ function searchBill(){
     }
 
     console.log(date_tmp)
-    InnerBill(date_tmp)
+    document.getElementsByClassName('checkout').innerHTML= `${date_tmp[2].ngayhd}`
 }
 

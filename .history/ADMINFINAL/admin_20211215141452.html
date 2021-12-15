@@ -24,7 +24,7 @@
         createProduct();
         LoadBill();
         LoaddetailBill(); 
-        InnerBill(bill_arr);
+        InnerBill();
         LoadUser()
     }
 </script>
@@ -243,10 +243,17 @@
 
                       <div id="rightsection">
                         <div class="subsection">
-                            <h4>TÌM KIẾM</h4>
+                            <h1>TÌM KIẾM</h1>
                             <form>
+                            <label for="name">Tên khách hàng</label>
+                            <input type="text" id="name">
                             <label for="date">Ngày</label>
-                            <input type="text" id="date" value = '0/0/0'>
+                            <input type="date" id="date">
+                            <label for="status">Trạng thái</label>
+                            <select id="statussearch">
+                                <option value="Chưa xử lý">Chưa xử lý</option>
+                                <option value="Đã xử lý">Đã xử lý</option>
+                            </select>
                             <button type="button" onclick="searchBill()">Tìm</button>
                             </form>
                         </div>

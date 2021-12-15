@@ -980,10 +980,10 @@ function LoaddetailBill() {
 
 
 
-var bill_arr = JSON.parse(localStorage.getItem('bill'))
-function InnerBill(bill_arr){
+
+function InnerBill(){
     var checkout = document.getElementsByClassName('checkout')[0]
-    
+    var bill_arr = JSON.parse(localStorage.getItem('bill'))
     var detailBill_arr = JSON.parse(localStorage.getItem('detailbill'))
     checkout.innerHTML = `
     <tr  class="checkout-item"> 
@@ -1137,7 +1137,7 @@ userArray = {
   }
 
 
-InnerBill(bill_arr)
+InnerBill()
 
 }
 
@@ -1154,21 +1154,37 @@ for(var i=0; i<bill_arr.length; i++){
   }
 }
 
-InnerBill(bill_arr)
+InnerBill()
 
 }
 
 function searchBill(){
-    var bill_arr = JSON.parse(localStorage.getItem('bill'))
-	var date = document.getElementById('date').value;
-    var date_tmp = []
-    for(var i=0; i<bill_arr.length; i++){
-        if(bill_arr[i].ngayhd == date ){
-            date_tmp.push(bill_arr[i])
-        }
-    }
-
-    console.log(date_tmp)
-    InnerBill(date_tmp)
+	var billArray = JSON.parse(localStorage.getItem('bill'));
+	var date =document.getElementById('bill-date').innerHTML;
+	var billArrayTemp = [];
+	for (var i = 0; i < billArray.length; i++) {
+		if() {
+			billArrayTemp.push(billArray[i]);
+		}
+	}
+	var s='<th>NGÀY</th><th>KHÁCH HÀNG</th><th>GIÁ</th><th>TRẠNG THÁI</th>';
+	for(var i=0;i<billArrayTemp.length;i++){
+		if(billArrayTemp[i].status=='Chưa xử lý'){
+			s+='<tr onClick="showinfobill('+billArrayTemp[i].id+')">'+
+						'<td>'+billArrayTemp[i].date+'</td>'+
+						'<td>'+billArrayTemp[i].customer.fullname+'</td>'+
+						'<td>'+currency(billArrayTemp[i].totalprice)+'</td>'+
+						'<td style="color: red">'+billArrayTemp[i].status+'</td>'+
+					'</tr>';
+		}
+		else {
+			s+='<tr onClick="showinfobill('+billArrayTemp[i].id+')">'+
+						'<td>'+billArrayTemp[i].date+'</td>'+
+						'<td>'+billArrayTemp[i].customer.fullname+'</td>'+
+						'<td>'+currency(billArrayTemp[i].totalprice)+'</td>'+
+						'<td style="color: blue">'+billArrayTemp[i].status+'</td>'+
+					'</tr>';
+		}
+	}
+	document.getElementById('billlist').innerHTML=s;
 }
-

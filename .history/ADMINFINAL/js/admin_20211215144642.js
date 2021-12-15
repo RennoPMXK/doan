@@ -980,10 +980,10 @@ function LoaddetailBill() {
 
 
 
-var bill_arr = JSON.parse(localStorage.getItem('bill'))
+
 function InnerBill(bill_arr){
     var checkout = document.getElementsByClassName('checkout')[0]
-    
+    var bill_arr = JSON.parse(localStorage.getItem('bill'))
     var detailBill_arr = JSON.parse(localStorage.getItem('detailbill'))
     checkout.innerHTML = `
     <tr  class="checkout-item"> 
@@ -1137,7 +1137,7 @@ userArray = {
   }
 
 
-InnerBill(bill_arr)
+InnerBill()
 
 }
 
@@ -1154,7 +1154,7 @@ for(var i=0; i<bill_arr.length; i++){
   }
 }
 
-InnerBill(bill_arr)
+InnerBill()
 
 }
 

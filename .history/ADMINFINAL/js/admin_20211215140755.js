@@ -980,10 +980,10 @@ function LoaddetailBill() {
 
 
 
-var bill_arr = JSON.parse(localStorage.getItem('bill'))
-function InnerBill(bill_arr){
+
+function InnerBill(){
     var checkout = document.getElementsByClassName('checkout')[0]
-    
+    var bill_arr = JSON.parse(localStorage.getItem('bill'))
     var detailBill_arr = JSON.parse(localStorage.getItem('detailbill'))
     checkout.innerHTML = `
     <tr  class="checkout-item"> 
@@ -1137,7 +1137,7 @@ userArray = {
   }
 
 
-InnerBill(bill_arr)
+InnerBill()
 
 }
 
@@ -1154,21 +1154,8 @@ for(var i=0; i<bill_arr.length; i++){
   }
 }
 
-InnerBill(bill_arr)
+InnerBill()
 
 }
 
-function searchBill(){
-    var bill_arr = JSON.parse(localStorage.getItem('bill'))
-	var date = document.getElementById('date').value;
-    var date_tmp = []
-    for(var i=0; i<bill_arr.length; i++){
-        if(bill_arr[i].ngayhd == date ){
-            date_tmp.push(bill_arr[i])
-        }
-    }
-
-    console.log(date_tmp)
-    InnerBill(date_tmp)
-}
-
+  

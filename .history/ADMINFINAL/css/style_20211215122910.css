@@ -704,10 +704,9 @@ li a {
 .modal-description {
     width: 400px;
     height: 400px;
-    background-color: white;
+    background-color: black;
     display : block;
     position : fixed;
     left : 50%;
-    transform: translateX(-18%);
-    
+    transform : translateX(50%);
 }

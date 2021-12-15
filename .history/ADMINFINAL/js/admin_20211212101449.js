@@ -2,20 +2,15 @@ var temp = 0 ;
 function showColNavBar() {
     ++temp ;
     if (temp%2==1) {
-        
-        document.getElementById('col-nav-bar2-id').style.visibility = "visible";
-        document.getElementById('col-nav-bar-id').style.marginLeft = '-25rem' ;
+        document.getElementById('col-nav-bar-id').style.marginLeft = '-20rem' ;
         // document.getElementById('col-nav-bar-id').style.display = 'none' ;
-        document.getElementById('cont-view-id').style.marginLeft = '1.9rem';
-        document.getElementById('footer-id').style.marginLeft = '1.9rem';
+        document.getElementById('cont-view-id').style.marginLeft = '1rem';
+        document.getElementById('footer-id').style.marginLeft = '1rem';
     } else {
-        
-        document.getElementById('col-nav-bar2-id').style.visibility = "hidden";
-        document.getElementById('col-nav-bar-id').style.marginLeft = '-0.5rem' ;
-        // document.getElementById('col-nav-bar-id').style.display = 'flex' ;        
-        document.getElementById('cont-view-id').style.marginLeft = '18.9rem';
-        document.getElementById('footer-id').style.marginLeft = '18.9rem';
-        
+        document.getElementById('col-nav-bar-id').style.marginLeft = '0rem' ;
+        // document.getElementById('col-nav-bar-id').style.display = 'flex' ;
+        document.getElementById('cont-view-id').style.marginLeft = '19rem';
+        document.getElementById('footer-id').style.marginLeft = '19rem';
     }
 };
 
@@ -121,15 +116,15 @@ function displayUserDict() {
         <div style="margin-left: 50rem"><b>Date created</b></div>
         <div style="margin-left: 60rem"><b>User Type</b></div>
     </div>`;
-    document.getElementById('userlist').style.height = UserDict.length*9+1 + 'rem';
+    document.getElementById('userlist').style.height = UserDict.length*9 + 'rem';
 	for(var i = 0 ; i < UserDict.length; i++)
 		cache += `<div class='table-control'>
             <div style="margin-left: 0rem"> ${String(i+1)} </div>
             <div style="margin-left: 2.5rem">${UserDict[i].email} </div>
             <div style="margin-left: 21rem">${UserDict[i].username}</div>
             <div style="margin-left: 33rem">${UserDict[i].password}</div>
-            <button style="margin-left: 41rem" id="deletebut${i}" class="delete" onClick="deleteUser('${UserDict[i].username}')"><i class="far fa-trash-alt"></i></button>
-            <button style="margin-left: 46rem" id="editbut" class="edit" onClick="editUser('${UserDict[i].username}')"><i class="fas fa-user-edit"></i></button>
+            <button style="margin-left: 41rem" id="deletebut${i}" class="delete" onClick="deleteUser('${UserDict[i].username}')"><box-icon name='x'></box-icon></button>
+            <button style="margin-left: 46rem" id="editbut" class="edit" onClick="editUser('${UserDict[i].username}')"><box-icon type='solid' name='edit'></box-icon></button>
             <div style="margin-left: 52rem">${UserDict[i].datesignup}</div>
             <button  style="margin-left: 60rem" class='user-type-but-${UserDict[i].userType}' id='user-type-but-id-${i}' onclick="switchUserType(${i})">${UserDict[i].userType}</button>
         </div>`
@@ -561,27 +556,21 @@ function addProduct() {
                         return;
                     }
                 if (id != ''){
-        
+                    alert("ID Valid !")
+                }else {
                     productDict[i].id = id ;
-                    
-                    
                 }
                    
-                if (ten != ''){
+                if (ten != '')
                     productDict[i].ten = ten ;
-                    
-                }
-
                 if (giacu == "" || isNaN(giacu)){
                     alert("Old Price Valid !")
-                    
                 }else {
                     productDict[i].giacu = giacu ;
                 }
                     
-                if (giamoi != '' || isNaN(giacu)){
+                if (giamoi != ''){
                     alert("New Price Valid!")
-                    
                 }else{
                     productDict[i].giamoi = giamoi ;
                 }
@@ -980,15 +969,14 @@ function LoaddetailBill() {
 
 
 
-var bill_arr = JSON.parse(localStorage.getItem('bill'))
-function InnerBill(bill_arr){
+
+function InnerBill(){
     var checkout = document.getElementsByClassName('checkout')[0]
-    
+    var bill_arr = JSON.parse(localStorage.getItem('bill'))
     var detailBill_arr = JSON.parse(localStorage.getItem('detailbill'))
     checkout.innerHTML = `
     <tr  class="checkout-item"> 
-    <th width="150px" height="40px" >Mã đơn hàng</th>
-    <th width="150px" height="40px" >Mã khách hàng</th>
+    <th width="170px" height="40px" >Mã đơn hàng</th>
     <th width= "300px">Chi tiết</th>
     <th width= "170px">Ngày mua</th>
     <th width= "260px">Phương thức thanh toán</th>
@@ -1018,10 +1006,6 @@ function InnerBill(bill_arr){
                         content.innerHTML = `
                         <th id="bill-num" >
                           ${bill_arr[i].mahd}
-                        </th>
-
-                        <th>
-                             ${bill_arr[i].makh}
                         </th>
                        
                         <th id="bill-des" >
@@ -1056,11 +1040,6 @@ function InnerBill(bill_arr){
                         content.innerHTML = `
                         <th id="bill-num" >
                           ${bill_arr[i].mahd}
-                        </th>
-
-                        
-                        <th>
-                             ${bill_arr[i].makh}
                         </th>
                        
                         <th id="bill-des" >
@@ -1137,7 +1116,7 @@ userArray = {
   }
 
 
-InnerBill(bill_arr)
+InnerBill()
 
 }
 
@@ -1154,21 +1133,8 @@ for(var i=0; i<bill_arr.length; i++){
   }
 }
 
-InnerBill(bill_arr)
+InnerBill()
 
 }
 
-function searchBill(){
-    var bill_arr = JSON.parse(localStorage.getItem('bill'))
-	var date = document.getElementById('date').value;
-    var date_tmp = []
-    for(var i=0; i<bill_arr.length; i++){
-        if(bill_arr[i].ngayhd == date ){
-            date_tmp.push(bill_arr[i])
-        }
-    }
-
-    console.log(date_tmp)
-    InnerBill(date_tmp)
-}
-
+  
