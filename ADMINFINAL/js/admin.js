@@ -57,6 +57,8 @@ function displayProduct() {
     document.getElementById('newDealBox').style.marginRight = '1rem';
     showOrHideOrFlex('undo-but', 'none');
     showOrHideOrFlex('product-dashboard', 'block')
+    showOrHideOrFlex('modify-img', 'none')
+
 }
 function changeLabelToProduct () {
     document.getElementById('user-box-1').innerHTML = 'ID:';
